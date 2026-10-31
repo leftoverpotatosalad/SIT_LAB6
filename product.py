@@ -18,3 +18,6 @@ class Product:
             print("Stock updated successfully!")
         else:
             print("Stock cannot be negative!")
+
+    def get_product_id(self):
+            return self.__product_id
