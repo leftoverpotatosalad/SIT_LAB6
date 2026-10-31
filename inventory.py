@@ -21,3 +21,11 @@ class Inventory:
             for product in self.products:
                 product.display_information()
                 print("----------------------")
+
+    def to_dict(self):
+        return {
+            "product_id": self.__product_id,
+            "name": self.__name,
+            "price": self.__price,
+            "stock": self.__stock
+        }

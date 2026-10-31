@@ -1,7 +1,10 @@
 from product import Product
 from inventory import Inventory
+from file_manager import save_inventory, load_inventory
 
 inventory = Inventory()
+
+load_inventory(inventory)
 
 while True:
     print("\n========== INVENTORY MANAGEMENT SYSTEM ==========")
@@ -44,6 +47,9 @@ while True:
     elif choice == "4":
         product_id = input("Enter Product ID to search: ")
         product = inventory.search_product(product_id)
+
+    elif choice == "5":
+        save_inventory(inventory)
 
         if product is not None:
             print("Product found!")
