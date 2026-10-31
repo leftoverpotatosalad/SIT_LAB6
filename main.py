@@ -48,14 +48,14 @@ while True:
         product_id = input("Enter Product ID to search: ")
         product = inventory.search_product(product_id)
 
-    elif choice == "5":
-        save_inventory(inventory)
-
         if product is not None:
             print("Product found!")
             product.display_information()
         else:
             print("Product not found!")
+
+    elif choice == "5":
+        save_inventory(inventory)
 
     else:
         print("Invalid choice!")
